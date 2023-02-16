@@ -6,10 +6,10 @@ public class Main {
         Solution solution = new Solution();
         System.out.println(solution.stacksProblem(array));
 
-        System.out.println(solution.consecutiveNumberProblem(1765));
+        System.out.println(solution.consecutiveNumberProblem(1000000000));
 
-        int[] fairIndexArray1 = new int[]{1, 4, 2, -2, 5};
-        int[] fairIndexArray2 = new int[]{7, -2, -2, 2, 5};
+        int[] fairIndexArray1 = new int[]{0,4,-1,0,3};
+        int[] fairIndexArray2 = new int[]{0,-2,5,0,3};
         System.out.println(solution.fairIndexProblem(fairIndexArray1, fairIndexArray2));
     }
 
