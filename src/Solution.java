@@ -73,17 +73,19 @@ public class Solution {
 
             for (int j = 0; j < A.length; j++) {
                 if (j <= i) {
-                    if (j == 0) firstSumA = A[j];
-                    else firstSumA += A[j];
-
-                    if (j == 0) firstSumB = B[j];
-                    else firstSumB += B[j];
+                    if (j == 0) {
+                        firstSumA = A[j];
+                        firstSumB += B[j];
+                    } else {
+                        firstSumA += A[j];
+                        firstSumB = B[j];
+                    }
                 }
                 if (A.length-1-j == i) break;
-                secondSumA += A[A.length-1-j];
-
-                if (A.length-1-j == i) break;
-                secondSumB += B[B.length-1-j];
+                else {
+                    secondSumA += A[A.length-1-j];
+                    secondSumB += B[B.length-1-j];
+                }
             }
 
             if (firstSumA == secondSumA && firstSumA == firstSumB && firstSumA == secondSumB
