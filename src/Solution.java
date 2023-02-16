@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Solution {
 
@@ -87,12 +86,8 @@ public class Solution {
                 secondSumB += B[B.length-1-j];
             }
 
-            if (Objects.equals(firstSumA, secondSumA) && Objects.equals(firstSumA, firstSumB)
-                    && Objects.equals(firstSumA, secondSumB)
-                    && Objects.equals(secondSumA, firstSumB) && Objects.equals(secondSumA, secondSumB)
-                    && Objects.equals(firstSumB, secondSumB)) {
-                fairIndexes++;
-            }
+            if (firstSumA == secondSumA && firstSumA == firstSumB && firstSumA == secondSumB
+                    && secondSumA == firstSumB && secondSumA == secondSumB && firstSumB == secondSumB) fairIndexes++;
         }
 
         return fairIndexes;
