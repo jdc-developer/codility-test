@@ -75,10 +75,10 @@ public class Solution {
                 if (j <= i) {
                     if (j == 0) {
                         firstSumA = A[j];
-                        firstSumB += B[j];
+                        firstSumB = B[j];
                     } else {
                         firstSumA += A[j];
-                        firstSumB = B[j];
+                        firstSumB += B[j];
                     }
                 }
                 if (A.length-1-j == i) break;
